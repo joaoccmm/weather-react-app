@@ -1,69 +1,123 @@
+.body{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearBg{
+  background-color: rgba(133, 188, 208, 0.4)
+}
+
+.cloudBg{
+  background-color: rgba(189, 195, 199, 0.4)
+}
+
+.drizzleBg{
+  background-color: rgba(188, 212, 218, 0.4);
+}
+
+.rainBg{
+  background-color: rgba(55, 119, 151, 0.4);
+}
+
+.snowBg{
+  background-color:rgba(116, 120, 132, 0.4);
+}
 .container{
-  width: 607px;
-  height: 829px;
+  width: 1050px;
+  height: 600px;
+  position: relative;
+  box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.2);
+}
+
+.bg{
+  position: absolute;
+}
+
+.bgImg{
   border-radius: 12px;
-  margin: 75px auto auto;
-  background-image: linear-gradient(180deg, #130754 0%, #3b2f80 100%);
+  width: 1050px;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(90%)
+}
+
+.content{
+  position: absolute;
+  width: 400px;
+  right:  0px;
+  height: 600px;
+  border-radius: 0 12px 12px 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0 15px;
+
 }
 
 .topBar{
-  display: flex;
-  justify-content: center;
-  gap: 14px;
   padding-top: 60px;
+  display: flex;  
+  justify-content:space-between;
+  border-bottom: solid 1px #ebfffc;
 }
 
 .topBar input{
   display: flex;
-  width: 362px;
-  height: 78px;
-  background: #ebfffc;
+  width: 260px;
+  height: 40px;
+  background: none;
   border: none;
   outline: none;
-  border-radius: 40px;
-  padding-left: 40px;
-  color: #626262;
+  color: #ebfffc;
   font-size: 20px;
   font-weight: 400;
-
 }
 
 .searchIcon{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 78px;
-  height: 78px;
-  background-color: #ebfffc;
+  width: 40px;
+  height: 40px;
+  /* background-color: #ebfffc; */
   border-radius: 40px;
   cursor: pointer;
 }
 
 .weatherIcon{
-  margin-top: 29px;
-  display: flex;
   justify-content: center;
+  margin-top: 30px;
+  display: flex;
+}
+
+.weatherIcon img{
+  height: 160px;
+  width: 160px;
 }
 
 .weatherTemp{
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   color: #ffffff;
-  font-size: 120px;
   font-weight: 400;
+  font-size: 60px;
 }
 
 .weatherLocation{
   display: flex;
   justify-content: center;
   color: #ffffff;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
 }
 
 .dataContainer{
-  margin-top: 50px;
+  margin-top: 30px;
   color: #ffffff;
+
   display: flex;
   justify-content: center; 
 }
@@ -71,17 +125,18 @@
 .element{
   margin: auto;
   display: flex;
-  align-items: flex-start;
   gap: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .data{
-  font-size: 34px;
+  font-size: 20px;
   font-weight: 400;
 }
 
 .text{
-  font-size: 20px;
+  font-size: px;
   font-weight: 400;
 
 }
