@@ -9,9 +9,12 @@ import { weatherBackgroundMapping } from './utils.ts';
 import { weatherIconMapping } from './utils.ts';
 //styless
 import './styles.css';
+//tosatify
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Weather = () => {
-  const [cityName, setCityName] = useState('Alaska  ');
+  const [cityName, setCityName] = useState('Belo Horizonte');
   const [weatherData, setWeatherData] = useState(null);
   const [weatherIcon, setWeatherIcon] = useState();
   const [bgColor, setBgColor] = useState();
@@ -40,12 +43,21 @@ export const Weather = () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
-
-      setWeatherData(data);
+      if (data?.cod === "404") {
+        toast.error('City not found! (Check spelling)', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          theme: "light",
+        });
+      } else {
+        setWeatherData(data);
+      }
       setCityName("");
+
     } catch (error) {
       console.error("Error fetching weather data:", error);
-      
+
     }
   };
 
@@ -78,11 +90,9 @@ export const Weather = () => {
               onChange={(e) => setCityName(e.target.value)}
               onKeyPress={(e) => handleKeyPress(e, cityName)}
             />
-
             <div className="searchIcon" onClick={() => { searchLocation(cityName); }}>
               <img src={searchIcon} alt="search icon" />
             </div>
-
           </div>
           <div className="weatherIcon">
             <img src={weatherIcon} alt="Weather Icon" />
@@ -107,6 +117,18 @@ export const Weather = () => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 };

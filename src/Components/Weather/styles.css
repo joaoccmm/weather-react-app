@@ -1,4 +1,4 @@
-.body{
+.body {
   width: 100vw;
   height: 100vh;
 
@@ -7,140 +7,139 @@
   justify-content: center;
 }
 
-.clearBg{
+.clearBg {
   background-color: rgba(133, 188, 208, 0.4)
 }
 
-.cloudBg{
+.cloudBg {
   background-color: rgba(189, 195, 199, 0.4)
 }
 
-.drizzleBg{
+.drizzleBg {
   background-color: rgba(188, 212, 218, 0.4);
 }
 
-.rainBg{
+.rainBg {
   background-color: rgba(55, 119, 151, 0.4);
 }
 
-.snowBg{
-  background-color:rgba(116, 120, 132, 0.4);
+.snowBg {
+  background-color: rgba(116, 120, 132, 0.4);
 }
-.container{
+
+.container {
   width: 1050px;
   height: 600px;
   position: relative;
-  box-shadow: 1px 1px 15px -3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
-.bg{
+.bg {
   position: absolute;
 }
 
-.bgImg{
-  border-radius: 12px;
+.bgImg {
   width: 1050px;
   height: 600px;
   object-fit: cover;
+  border-radius: 12px;
   filter: brightness(90%)
 }
 
-.content{
-  position: absolute;
+.content {
   width: 400px;
-  right:  0px;
+  right: 0px;
   height: 600px;
+  padding: 0 15px;
+  position: absolute;
   border-radius: 0 12px 12px 0;
   background: rgba(0, 0, 0, 0.7);
-  padding: 0 15px;
 
 }
 
-.topBar{
+.topBar {
+  display: flex;
   padding-top: 60px;
-  display: flex;  
-  justify-content:space-between;
+  justify-content: space-between;
   border-bottom: solid 1px #ebfffc;
 }
 
-.topBar input{
-  display: flex;
+.topBar input {
   width: 260px;
   height: 40px;
-  background: none;
   border: none;
+  display: flex;
   outline: none;
-  color: #ebfffc;
   font-size: 20px;
+  background: none;
+  color: #ebfffc;
   font-weight: 400;
 }
 
-.searchIcon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.searchIcon {
   width: 40px;
   height: 40px;
-  /* background-color: #ebfffc; */
-  border-radius: 40px;
+  display: flex;
   cursor: pointer;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
-.weatherIcon{
-  justify-content: center;
+.weatherIcon {
+  display: flex;
   margin-top: 30px;
-  display: flex;
-}
-
-.weatherIcon img{
-  height: 160px;
-  width: 160px;
-}
-
-.weatherTemp{
-  margin-top: 10px;
-  display: flex;
   justify-content: center;
+}
+
+.weatherIcon img {
+  width: 160px;
+  height: 160px;
+}
+
+.weatherTemp {
+  display: flex;
+  font-size: 60px;
+  margin-top: 10px;
   color: #ffffff;
   font-weight: 400;
-  font-size: 60px;
+  justify-content: center;
 }
 
-.weatherLocation{
+.weatherLocation {
   display: flex;
-  justify-content: center;
-  color: #ffffff;
   font-size: 40px;
   font-weight: 400;
+  color: #ffffff;
+  justify-content: center;
 }
 
-.dataContainer{
+.dataContainer {
   margin-top: 30px;
   color: #ffffff;
-
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
-.element{
+.element {
+  gap: 12px;
   margin: auto;
   display: flex;
-  gap: 12px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.data{
+.data {
   font-size: 20px;
   font-weight: 400;
 }
 
-.text{
+.text {
   font-size: px;
   font-weight: 400;
 
 }
 
-.iconElement{
+.iconElement {
   margin-top: 10px;
 }
